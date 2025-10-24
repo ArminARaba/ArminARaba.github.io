@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Teljes zöld háttér */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #00FF00; /* élénk zöld */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header stílus */
+        header {
+            width: 100%;
+            height: 150px; /* állítható magasság */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Kép stílus */
+        #header-image {
+            max-height: 100%;
+            max-width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- A kép neve legyen pl. "kep.png", a weboldal mappájában -->
+        <img id="header-image" src="RRC_1.png" alt="Header kép">
+    </header>
+
+    <script>
+        // Kép eltűntetése 30 másodperc után
+        setTimeout(() => {
+            const image = document.getElementById('header-image');
+            if (image) {
+                image.style.display = 'none';
+            }
+        }, 30000); // 30000 ms = 30 másodperc
+    </script>
+</body>
+</html>
